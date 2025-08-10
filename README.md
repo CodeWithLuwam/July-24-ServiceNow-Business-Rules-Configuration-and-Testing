@@ -1,19 +1,5 @@
 # July-24-ServiceNow-Business-Rules-Configuration-and-Testing
 
-Business Roles Navigation: <br>
-All > System Definition > Business Rules <br>
-![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Business%20Rules%20Navigation.png?raw=true) <br>
-Click New in the Business Rules table to create a New Business Rule <br>
-![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Click%20New%20in%20the%20Business%20Rules%20table.png?raw=true) <br>
-
----
-A short cut to build it is by going to the table you are currently working with, right click on the column header, hover on Configure  then click Business Rules. <br>
-![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Different%20option%20to%20Configure%20Business%20Rules.png?raw=true)
-It will open up a table with all the Business Rules tied to the table. <br>
-![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Business%20Rules%20tied%20up%20to%20the%20table.png?raw=true) <br>
-![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Asset%20Recovery%20Request%20Business%20Rule%20table.png?raw=true) <br>
-
----
 Scenario: <br>
 At DXC Tech, you're part of the IT Asset Management team. When a device is returned, you need to document what kind of device it is, who returned it, and confirm that asset tracking information is accurate. To help execute this, you'll automate two things: <br>
 - A reminder to double-check the asset tag when a laptop is returned <br>
@@ -29,6 +15,8 @@ TASK:<br>
 Create a new Asset Recovery Request<br>
 
 ---
+**Business Rule 1: Create a Reminder Message** <br>
+
 **When to run** tab:
 - Asset Type is Laptop
 - AND
@@ -40,6 +28,7 @@ Both conditions must be true.
 ![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/When%20to%20run%20tab-%20%20Business%20Rule.png?raw=true) <br>
 
 **Actions** tab: <br>
+
 Set up an **Add Message** action so that when a user is returning a laptop, a pop-up appears with the message:
 > Please ensure that the asset tag number is correct for your laptop.
 
@@ -60,4 +49,21 @@ Do not place this in the Short Description field — use the **Add Message** opt
 3. For this test, update a form to trigger the conditions.  <br>
 ( Reminder Message Appears )
 ![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Task%20Message%20Pops%20Up.png?raw=true)
+
+
+
+---
+---
+Business Roles Navigation: <br>
+All > System Definition > Business Rules <br>
+![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Business%20Rules%20Navigation.png?raw=true) <br>
+Click New in the Business Rules table to create a New Business Rule <br>
+![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Click%20New%20in%20the%20Business%20Rules%20table.png?raw=true) <br>
+
+---
+A short cut to build it is by going to the table you are currently working with, right click on the column header, hover on Configure  then click Business Rules. <br>
+![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Different%20option%20to%20Configure%20Business%20Rules.png?raw=true)
+It will open up a table with all the Business Rules tied to the table. <br>
+![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Business%20Rules%20tied%20up%20to%20the%20table.png?raw=true) <br>
+![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Asset%20Recovery%20Request%20Business%20Rule%20table.png?raw=true) <br>
 
