@@ -27,3 +27,14 @@ TASK:<br>
 &emsp;Create another Business Rule that fills in the Short Description with "Asset recovery initiated for [Employee Name]" only if it's empty <br>
 **Test Your Work** <br>
 Create a new Asset Recovery Request<br>
+
+---
+When to run:
+- Asset Type is Laptop
+- AND
+- Asset Tag is not empty
+
+Both conditions must be true.
+
+- We also check off Insert and Update 
+![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/When%20to%20run%20tab-%20%20Business%20Rule.png?raw=true)
