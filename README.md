@@ -29,7 +29,7 @@ TASK:<br>
 Create a new Asset Recovery Request<br>
 
 ---
-When to run:
+**When to run** tab:
 - Asset Type is Laptop
 - AND
 - Asset Tag is not empty
@@ -37,4 +37,27 @@ When to run:
 Both conditions must be true.
 
 - We also check off Insert and Update 
-![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/When%20to%20run%20tab-%20%20Business%20Rule.png?raw=true)
+![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/When%20to%20run%20tab-%20%20Business%20Rule.png?raw=true) <br>
+
+**Actions** tab: <br>
+Set up an **Add Message** action so that when a user is returning a laptop, a pop-up appears with the message:
+> Please ensure that the asset tag number is correct for your laptop.
+
+**Conditions for the message to appear**:
+1. Asset Type is Laptop.
+2. Asset Tag field is not empty.
+
+Do not place this in the Short Description field — use the **Add Message** option to display it as a pop-up. <br>
+![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Actions%20tab%20-%20Business%20Rule.png?raw=true)
+
+---
+
+**To test**: <br>
+1. Navigate to the module we created: <br>
+&emsp;**All > DXC Technology Device > Device Inventory** <br>
+2. Perform the actions needed to meet the trigger conditions (**Insert** or **Update**).  <br>
+![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Open%20an%20Existing%20Record.png?raw=true) <br>
+3. For this test, update a form to trigger the conditions.  <br>
+( Reminder Message Appears )
+![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Task%20Message%20Pops%20Up.png?raw=true)
+
