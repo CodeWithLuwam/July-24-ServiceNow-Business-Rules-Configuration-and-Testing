@@ -10,7 +10,7 @@ TASK:<br>
 &emsp;Create a Business Rule that displays:<br>
 &emsp;"Please ensure the asset tag number is correct for all laptops." when Asset Type is Laptop and the Asset Tag field is not empty<br>
 **Business Rule 2: Auto-fill Description**<br>
-&emsp;Create another Business Rule that fills in the Short Description with "Asset recovery initiated for [Employee Name]" only if it's empty <br>
+&emsp;Create another Business Rule that fills in the Short Description with "Asset recovery initiated for [Employee Name]" only if it's not empty <br>
 **Test Your Work** <br>
 Create a new Asset Recovery Request<br>
 
@@ -50,7 +50,23 @@ Do not place this in the Short Description field — use the **Add Message** opt
 ( Reminder Message Appears )
 ![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Task%20Message%20Pops%20Up.png?raw=true)
 
+---
 
+**Business Rule 2: Auto-fill Description**<br>
+We are working with the **Employee** field, and the message should only display if this field is not empty. <br>
+We are still checking the **Insert** and **Update** boxes so the action runs on both record creation and modification. <br>
+![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/When%20to%20run%20tab%20for%20Business%20Rule%202%20.png?raw=true) <br>
+
+We now check the Advanced box, which makes the Advanced tab appear. <br>
+We will skip the Actions tab because the script in the Advanced tab will serve as our action. <br>
+
+In the script: <br>
+- We’re creating a **Business Rule** that runs when the record is inserted or updated.
+- The script first checks if the **Short Description** field (`current.short_description`) is empty.
+- If it’s empty, it retrieves the **Employee** field’s display value (`current.employee.getDisplayValue()`), stores it in the `empName` variable, and sets the **Short Description** to: <br>
+`Asset recovery initiated for [Employee Name]` <br>
+- This ensures that the short description is automatically populated based on the employee name whenever a record is created or updated, but only if it was blank before. <br>
+![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Business%20Rule%202%20Advanced%20tab.png?raw=true)
 
 ---
 ---
