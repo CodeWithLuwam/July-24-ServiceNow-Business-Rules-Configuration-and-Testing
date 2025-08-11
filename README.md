@@ -66,11 +66,22 @@ In the script: <br>
 - If it’s empty, it retrieves the **Employee** field’s display value (`current.employee.getDisplayValue()`), stores it in the `empName` variable, and sets the **Short Description** to: <br>
 `Asset recovery initiated for [Employee Name]` <br>
 - This ensures that the short description is automatically populated based on the employee name whenever a record is created or updated, but only if it was blank before. <br>
+
+Correction** `current.u_employee.getDisplayValue()` instead of `.employee` <br>
 ![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Business%20Rule%202%20Advanced%20tab.png?raw=true)
 
 ---
+
+**To test**: <br>
+
+- Navigate back to the Asset Recovery table.
+- Select an existing record for the Asset Type.
+- Enter a detailed description; the Short Description field will automatically populate with "Asset recovery initiated for [Employee Name]".
+![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Short%20Description%20Automatically%20Populated%20.png?raw=true) <br>
 ---
 ---
+---
+
 **Business Rules Navigation**: <br>
 1. Go to **All > System Definition > Business Rules**. <br>
 ![](https://github.com/CodeWithLuwam/July-24-ServiceNow-Business-Rules-Configuration-and-Testing/blob/main/Images/Business%20Rules%20Navigation.png?raw=true) <br>
